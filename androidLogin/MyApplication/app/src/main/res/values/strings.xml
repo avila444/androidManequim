@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="txtlogin">Login</string>
+    <string name="txtsalvar">Acessar</string>
+    <string name="txtsair">Sair</string>
+    <string name="txtsenha">Senha</string>
+    <string name="erro">deu errado</string>
+    <string name="senhaCurta">está pequenininho</string>
+    <string name="senhaLonga">tá grande dms</string>
+    <string name="senhaOK">ok</string>
+</resources>

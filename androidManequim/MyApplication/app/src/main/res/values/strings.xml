@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Meu Manequim</string>
+    <string name="erroVazio">Os campos não estão completos...</string>
+    <string name="p">Tamanho P</string>
+    <string name="m">Tamanho M</string>
+    <string name="g">Tamanho G</string>
+    <string name="gg">Tamanho GG</string>
+</resources>
