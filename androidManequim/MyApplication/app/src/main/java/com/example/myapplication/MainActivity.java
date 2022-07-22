@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -61,7 +62,6 @@ public class MainActivity extends AppCompatActivity {
         editor.putString("Peso", mostraPeso);
         editor.putString("Altura", mostraAltura);
         editor.apply();
-
     }
 
     public void notificaLimpar(View view){
@@ -72,9 +72,45 @@ public class MainActivity extends AppCompatActivity {
         editor.remove("Peso");
         editor.remove("Altura");
         editor.apply();
+
+        if(BmostraPeso == null && BmostraAltura == null){
+            botaoEnviar.setText("Ver seu tamanho");
+            int bgcolor = ContextCompat.getColor(this, R.color.purple_200);
+            int textcolor = ContextCompat.getColor(this, R.color.white);
+
+            botaoEnviar.setBackgroundColor(bgcolor);
+            botaoEnviar.setTextColor(textcolor);
+        }
+        else{
+            botaoEnviar.setText("Manequim Salvo");
+            int bgcolor = ContextCompat.getColor(this, R.color.black);
+            int textcolor = ContextCompat.getColor(this, R.color.white);
+
+            botaoEnviar.setBackgroundColor(bgcolor);
+            botaoEnviar.setTextColor(textcolor);
+        }
+
     }
 
     public int confereTudo(String peso, String altura){
+
+        if(BmostraPeso == null && BmostraAltura == null){
+            botaoEnviar.setText("Ver seu tamanho");
+            int bgcolor = ContextCompat.getColor(this, R.color.purple_200);
+            int textcolor = ContextCompat.getColor(this, R.color.white);
+
+            botaoEnviar.setBackgroundColor(bgcolor);
+            botaoEnviar.setTextColor(textcolor);
+        }
+        else{
+            botaoEnviar.setText("Manequim Salvo");
+            int bgcolor = ContextCompat.getColor(this, R.color.black);
+            int textcolor = ContextCompat.getColor(this, R.color.white);
+
+            botaoEnviar.setBackgroundColor(bgcolor);
+            botaoEnviar.setTextColor(textcolor);
+        }
+
         int intPeso = Integer.parseInt(peso);
         int intAltura = Integer.parseInt(altura) / 100;
         float imc = intPeso/(intAltura*intAltura);
