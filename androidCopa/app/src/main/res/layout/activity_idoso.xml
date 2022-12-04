@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IdosoActivity">
+
+    <TimePicker
+        android:id="@+id/TimePicker"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:amPmBackgroundColor="#CA1E1E"
+        android:headerBackground="@color/teal_700"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/remedioInformado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:hint="Informe o medicamento"
+        android:inputType="textPersonName"
+        android:maxEms="100"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textColorHint="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/tempoRemedio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/tempoRemedio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="188dp"
+        android:backgroundTint="@color/teal_700"
+        android:backgroundTintMode="add"
+        android:text="ADICIONAR"
+        android:textColor="#DEE4E4"
+        android:textColorHighlight="#0000"
+        android:textSize="25dp"
+        app:iconTint="#AE2727"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:rippleColor="#9DBFBC" />
+
+    <TextView
+        android:id="@+id/resultado1"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="15dp"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/resultado2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tempoRemedio"
+        app:layout_constraintVertical_bias="0.373" />
+
+    <TextView
+        android:id="@+id/resultado2"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/resultado3"
+        app:layout_constraintStart_toEndOf="@+id/resultado1"
+        app:layout_constraintTop_toBottomOf="@+id/tempoRemedio"
+        app:layout_constraintVertical_bias="0.373" />
+
+    <TextView
+        android:id="@+id/resultado3"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="35dp"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/resultado2"
+        app:layout_constraintTop_toBottomOf="@+id/tempoRemedio"
+        app:layout_constraintVertical_bias="0.373" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

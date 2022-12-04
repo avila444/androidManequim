@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+
+        <LinearLayout
+            android:id="@+id/botaoinicial"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:background="@color/design_default_color_secondary_variant"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingStart="12dp"
+            android:paddingTop="35dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="35dp">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="55dp"
+                android:layout_height="57dp"
+                app:srcCompat="@drawable/ic_baseline_book_24" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/inicio"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textAlignment="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/botaoidoso"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:background="@color/design_default_color_secondary_variant"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingStart="12dp"
+            android:paddingTop="35dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="35dp">
+
+            <ImageView
+                android:id="@+id/imageViewidoso"
+                android:layout_width="55dp"
+                android:layout_height="57dp"
+                app:srcCompat="@drawable/ic_baseline_medical_services_24" />
+
+            <TextView
+                android:id="@+id/textViewidoso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/texto"
+                android:textAlignment="center"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

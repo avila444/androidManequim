@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="inicio">Minha hora de estudos</string>
+    <string name="embranco"> Preencha todos os campos</string>
+    <string name="tempoestudo">Informe tempo de estudo</string>
+    <string name="disciplina">Informe a disciplina</string>
+    <string name="botEstudo">Adicionar Horário</string>
+    <string name="popup1_1">Tempo e disciplina informados: </string>
+    <string name="cheio">Todos os campos já foram preenchidos</string>
+
+
+    <string name="texto">Meus horários de tomar remédios</string>
+
+</resources>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/primeiro"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CopaActivity">
+
+    <TextView
+        android:id="@+id/logo"
+        android:layout_width="417dp"
+        android:layout_height="58dp"
+        android:background="#B2E397"
+        android:backgroundTint="#B2E397"
+        android:text="APOSTAS DA COPA"
+        android:textAlignment="center"
+        android:textColor="#3797E3"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#B2E397"
+        android:text="Inserir"
+        android:textColor="#3797E3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/logo"
+        app:layout_constraintVertical_bias="0.716" />
+
+    <EditText
+        android:id="@+id/campeao"
+        android:layout_width="182dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="240dp"
+        android:ems="10"
+        android:hint="Campeão"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/vice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <EditText
+        android:id="@+id/terceiro"
+        android:layout_width="182dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Terceiro lugar"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vice" />
+
+    <EditText
+        android:id="@+id/vice"
+        android:layout_width="182dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginBottom="17dp"
+        android:ems="10"
+        android:hint="Vice"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/terceiro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/campeao" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
