@@ -23,5 +23,11 @@ O objetivo do aplicativo era receber informações de login e, caso o login foss
 📅 12/08/2022 - ??/??/2022 <br>
 O objetivo do aplicativo é ter uma interface feita com o *Linear Layout* e possuir navegação entre janelas através de "botões"
 
+### Aplicativo Final: <br>
+📅 29/11/2022 - ??/??/2022 <br>
+Aplicativo que reúne os 2 últimos feitos porém com um a mais, ele deverá ter uma interface inicial com um botão que leve para outra página. Essa outra página deverá ser temática de acordo com a escolha de cada grupo (no meu caso a Copa do Mundo).
+* O aplicativo deverá possuir um banco de dados
+* Deverá haver um popup com 2 opções: salvar no banco e cancelar
+
 </div>
 <!--Aulas-->
