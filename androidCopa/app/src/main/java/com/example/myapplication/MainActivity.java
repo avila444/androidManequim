@@ -22,30 +22,30 @@ public class MainActivity extends AppCompatActivity {
         botaoCopa = findViewById(R.id.botaoCopa);
 
 
-        //evento de click no linearlayout
+        //Click para abrir nova tela
         botaoEstudo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, EstudoActivity.class);
-                startActivity(intent); //abre a nova tela
+                startActivity(intent); //Abre a Estudo Activity
             }
         });
 
-        //evento de click no linearlayout
+        //Click para abrir nova tela
         botaoRemedio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, IdosoActivity.class);
-                startActivity(intent); //abre a nova tela
+                startActivity(intent); //Abre a IdosoActivity
             }
         });
 
-        //evento de click no linearlayout
+        //Click para abrir nova tela
         botaoCopa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, CopaActivity.class);
-                startActivity(intent); //abre a nova tela
+                startActivity(intent); //Abre a Copa Activity
             }
         });
 

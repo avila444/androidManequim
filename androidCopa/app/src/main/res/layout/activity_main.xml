@@ -1,280 +1,167 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:padding="15dp"
     android:layout_height="match_parent"
-    android:background="@color/bgcolor"
-    tools:context=".DashboardActivity">
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:layout_margin="0dp"
+    >
 
-    <androidx.core.widget.NestedScrollView
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:fillViewport="true">
+        android:orientation="vertical"
+        tools:context=".MainActivity"
+        tools:ignore="UselessParent">
 
+        <!--Botao de Estudos-->
         <LinearLayout
+            android:id="@+id/botaoEstudo"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:layout_height="222dp"
+            android:background="@color/orange"
+            android:gravity="center"
+            >
 
+            <ImageView
+                android:id="@+id/studyBook"
+                app:srcCompat="@drawable/study_book"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                />
 
-            <LinearLayout
-                android:id="@+id/linearLayout"
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/textStudy"
+                android:layout_width="155dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="14dp"
-                android:orientation="horizontal"
-                >
+                android:fontFamily="@font/secular_one"
+                android:text="@string/str_study"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:layout_margin="75dp"
+                android:textSize="30sp" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Aplicativo Final"
-                    android:textColor="#fff"
-                    android:textSize="26dp"
-                    android:textStyle="bold"
-                    />
+            <ImageView
+                android:id="@+id/studyArrow"
+                app:srcCompat="@drawable/arrow"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                />
 
-                <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/gradientsearch"
-                    />
+        </LinearLayout><!--Estudos-->
 
+        <!--Botao de Remedio-->
+        <LinearLayout
+            android:id="@+id/botaoRemedio"
+            android:layout_width="match_parent"
+            android:layout_height="222dp"
+            android:background="@color/blue"
+            android:gravity="center"
+            >
 
-            </LinearLayout>
+            <ImageView
+                android:id="@+id/medicRemedy"
+                app:srcCompat="@drawable/medical_kit"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                />
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/textRemedy"
+                android:layout_width="155dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:orientation="vertical"
-                app:layout_constraintEnd_toEndOf="@+id/linearLayout"
-                app:layout_constraintStart_toStartOf="@+id/linearLayout"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-                >
+                android:fontFamily="@font/secular_one"
+                android:text="@string/str_remedy"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:layout_margin="75dp"
+                android:textSize="30sp" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginHorizontal="5dp"
-                    android:layout_marginBottom="10dp"
-                    android:orientation="horizontal"
-                    >
+            <ImageView
+                android:id="@+id/remedyArrow"
+                app:srcCompat="@drawable/arrow"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                />
 
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:layout_weight="1"
-                        android:backgroundTint="@color/bgcolor"
-                        app:cardElevation="50dp"
-                        >
+        </LinearLayout><!--Estudos-->
 
-                        <!--                    Bloco #01: Estudo-->
-                        <LinearLayout
-                            android:id="@+id/botaoEstudo"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@drawable/gradientcard"
-                            android:orientation="vertical"
-                            android:paddingHorizontal="10dp"
-                            android:paddingVertical="20dp">
+        <!--Botao de Copa-->
+        <LinearLayout
+            android:id="@+id/botaoCopa"
+            android:layout_width="match_parent"
+            android:layout_height="222dp"
+            android:background="@color/green"
+            android:gravity="center"
+            >
 
-                            <ImageView
-                                android:layout_width="40dp"
-                                android:layout_height="wrap_content"
-                                android:src="@drawable/facebook" />
+            <ImageView
+                android:id="@+id/cupBall"
+                app:srcCompat="@drawable/ball"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                />
 
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginVertical="5dp"
-                                android:layout_weight="1"
-                                android:text="Facebook\nads"
-                                android:textColor="#fff"
-                                android:textSize="26dp"
-                                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/textCup"
+                android:layout_width="155dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/secular_one"
+                android:text="@string/str_worldcup"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:layout_margin="75dp"
+                android:textSize="30sp" />
 
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginVertical="1dp"
-                                android:layout_weight="1"
-                                android:text="Hello join with me on fb"
-                                android:textColor="#f1f1f1"
-                                android:textSize="15dp"
-                                android:textStyle="bold" />
+            <ImageView
+                android:id="@+id/cupArrow"
+                app:srcCompat="@drawable/arrow"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                />
 
+        </LinearLayout><!--Estudos-->
 
-                        </LinearLayout>
+        <!--Botao de Copa-->
+        <LinearLayout
+            android:id="@+id/botaoSair"
+            android:layout_width="match_parent"
+            android:layout_height="225dp"
+            android:background="@color/pink"
+            android:gravity="center"
+            >
 
-                    </androidx.cardview.widget.CardView>
+            <ImageView
+                android:id="@+id/exit"
+                app:srcCompat="@drawable/exit"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                />
 
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:layout_weight="1"
-                        android:backgroundTint="@color/bgcolor"
-                        app:cardElevation="50dp"
-                        >
-                        <!--                    Bloco #02: Remédio-->
-                        <LinearLayout
-                            android:id="@+id/botaoRemedio"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@drawable/uigradient"
-                            android:orientation="vertical"
-                            android:paddingHorizontal="10dp"
-                            android:paddingVertical="20dp">
+            <TextView
+                android:id="@+id/textExit"
+                android:layout_width="155dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/secular_one"
+                android:text="@string/str_sair"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:layout_margin="75dp"
+                android:textSize="30sp" />
 
-                            <ImageView
-                                android:layout_width="40dp"
-                                android:layout_height="wrap_content"
-                                android:src="@drawable/uxdesign" />
+            <ImageView
+                android:id="@+id/exitArrow"
+                app:srcCompat="@drawable/arrow"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                />
 
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginVertical="5dp"
-                                android:layout_weight="1"
-                                android:text="Ui/Ux\nDesign"
-                                android:textColor="#fff"
-                                android:textSize="26dp"
-                                android:textStyle="bold" />
+        </LinearLayout><!--Estudos-->
 
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginVertical="1dp"
-                                android:layout_weight="1"
-                                android:text="Hello join with me on fb"
-                                android:textColor="#f1f1f1"
-                                android:textSize="15dp"
-                                android:textStyle="bold" />
+    </LinearLayout>
 
-
-                        </LinearLayout>
-
-                    </androidx.cardview.widget.CardView>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginHorizontal="5dp"
-                    android:layout_marginBottom="10dp"
-                    android:orientation="horizontal">
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:layout_weight="1"
-                        android:backgroundTint="@color/bgcolor"
-                        app:cardElevation="50dp">
-
-                        <!--                    Bloco #03: Aplicativo Final-->
-                        <LinearLayout
-                            android:id="@+id/botaoCopa"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@drawable/uigradient"
-                            android:orientation="vertical"
-                            android:paddingHorizontal="10dp"
-                            android:paddingVertical="20dp">
-
-                            <ImageView
-                                android:layout_width="40dp"
-                                android:layout_height="wrap_content"
-                                android:src="@drawable/ball" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginVertical="5dp"
-                                android:layout_weight="1"
-                                android:text="World Cup: \nPalpites"
-                                android:textColor="#fff"
-                                android:textSize="26dp"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginVertical="1dp"
-                                android:layout_weight="1"
-                                android:text="Guarde seus palpites!"
-                                android:textColor="#f1f1f1"
-                                android:textSize="15dp"
-                                android:textStyle="bold" />
-
-
-                        </LinearLayout>
-
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:layout_weight="1"
-                        android:backgroundTint="@color/bgcolor"
-                        app:cardElevation="50dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@drawable/gradientcard"
-                            android:orientation="vertical"
-                            android:paddingHorizontal="10dp"
-                            android:paddingVertical="20dp">
-
-                            <ImageView
-                                android:layout_width="40dp"
-                                android:layout_height="wrap_content"
-                                android:src="@drawable/google" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginVertical="5dp"
-                                android:layout_weight="1"
-                                android:text="Google\nAds"
-                                android:textColor="#fff"
-                                android:textSize="26dp"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginVertical="1dp"
-                                android:layout_weight="1"
-                                android:text="Google\nAds"
-                                android:textColor="#f1f1f1"
-                                android:textSize="15dp"
-                                android:textStyle="bold" />
-
-
-                        </LinearLayout>
-
-                    </androidx.cardview.widget.CardView>
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-        </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

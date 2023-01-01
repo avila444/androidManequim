@@ -1,14 +1,30 @@
 <resources>
-    <string name="app_name">My Application</string>
-    <string name="inicio">Minha hora de estudos</string>
+    <!--Default Strings-->
+    <string name="app_name">Aplicativo Final</string>
     <string name="embranco"> Preencha todos os campos</string>
+    <string name="cheio">Todos os campos já foram preenchidos</string>
+
+    <!--Main Strings-->
+    <string name="str_study">Estudos</string>
+    <string name="str_remedy">Remédios</string>
+    <string name="str_worldcup">Worldcup</string>
+    <string name="str_sair">Sair</string>
+
+    <!--Estudo Strings-->
     <string name="tempoestudo">Informe tempo de estudo</string>
     <string name="disciplina">Informe a disciplina</string>
     <string name="botEstudo">Adicionar Horário</string>
     <string name="popup1_1">Tempo e disciplina informados: </string>
-    <string name="cheio">Todos os campos já foram preenchidos</string>
+
+    <!--Remédio Strings-->
+
+    <!--Copa Strings-->
+    <string name="wc_title">Palpites da Copa do Mundo</string>
+    <string name="hint_champion">Campeão</string>
+    <string name="hint_second">Segundo</string>
+    <string name="hint_third">Terceiro</string>
+    <string name="view_db">Ver Palpites Salvos</string>
 
 
-    <string name="texto">Meus horários de tomar remédios</string>
 
 </resources>

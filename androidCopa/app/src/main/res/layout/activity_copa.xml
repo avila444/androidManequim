@@ -1,81 +1,184 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/primeiro"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CopaActivity">
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:layout_margin="0dp"
+    >
 
-    <TextView
-        android:id="@+id/logo"
-        android:layout_width="417dp"
-        android:layout_height="58dp"
-        android:background="#B2E397"
-        android:backgroundTint="#B2E397"
-        android:text="APOSTAS DA COPA"
-        android:textAlignment="center"
-        android:textColor="#3797E3"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="16dp"
-        android:backgroundTint="#B2E397"
-        android:text="Inserir"
-        android:textColor="#3797E3"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/logo"
-        app:layout_constraintVertical_bias="0.716" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/campeao"
-        android:layout_width="182dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="240dp"
-        android:ems="10"
-        android:hint="Campeão"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/vice"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo" />
+        <!--Header-->
+        <LinearLayout
+            android:id="@+id/botaoEstudo"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/green"
+            android:gravity="center"
+            >
 
-    <EditText
-        android:id="@+id/terceiro"
-        android:layout_width="182dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="12dp"
-        android:ems="10"
-        android:hint="Terceiro lugar"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/vice" />
 
-    <EditText
-        android:id="@+id/vice"
-        android:layout_width="182dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="17dp"
-        android:layout_marginBottom="17dp"
-        android:ems="10"
-        android:hint="Vice"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/terceiro"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/campeao" />
+            <TextView
+                android:id="@+id/textStudy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/secular_one"
+                android:text="@string/wc_title"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout><!--Header-->
+
+        <!--Body Part #01-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            tools:context=".MainActivity"
+            >
+
+            <!--Position #01-->
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_margin="25dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    app:srcCompat="@drawable/trophy"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="@string/hint_champion"
+                    android:textAlignment="center"
+                    android:textColor="@color/golden"
+                    />
+
+            </LinearLayout><!--Position #01-->
+
+        </LinearLayout><!--Body Part #01-->
+
+        <!--Body Part #02-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            tools:context=".MainActivity"
+            >
+
+            <!--Position #02-->
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_margin="25dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    app:srcCompat="@drawable/silver_medal"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="@string/hint_second"
+                    android:textAlignment="center"
+                    android:textColor="@color/golden"
+                    />
+
+            </LinearLayout><!--Position #02-->
+
+            <!--Position #03-->
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_margin="25dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    app:srcCompat="@drawable/bronze_medal"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="@string/hint_third"
+                    android:textAlignment="center"
+                    android:textColor="@color/golden" />
+
+            </LinearLayout><!--Position #03-->
+
+        </LinearLayout><!--Body Part #02-->
+
+        <!--Button view database-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:gravity="bottom"
+            tools:context=".MainActivity"
+            >
+
+            <LinearLayout
+                android:id="@+id/botaoShowdb"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/green"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="30dp"
+                    android:fontFamily="@font/secular_one"
+                    android:text="@string/view_db"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    android:textAlignment="center"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/arrow" />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout><!--Button view database-->
+
+
+    </LinearLayout>
+
+</LinearLayout>
