@@ -107,7 +107,7 @@
                     android:layout_height="50dp"
                     android:hint="@string/hint_second"
                     android:textAlignment="center"
-                    android:textColor="@color/golden"
+                    android:textColor="@color/silver"
                     />
 
             </LinearLayout><!--Position #02-->
@@ -133,7 +133,7 @@
                     android:layout_height="50dp"
                     android:hint="@string/hint_third"
                     android:textAlignment="center"
-                    android:textColor="@color/golden" />
+                    android:textColor="@color/bronze" />
 
             </LinearLayout><!--Position #03-->
 
