@@ -1,5 +1,7 @@
 package com.example.myapplication;
 
 public class Registro {
-    String nome;
+    String campeao;
+    String segundo;
+    String terceiro;
 }

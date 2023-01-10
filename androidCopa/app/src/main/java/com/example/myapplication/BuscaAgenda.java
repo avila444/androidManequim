@@ -18,7 +18,7 @@ public class BuscaAgenda extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_agenda);
+        setContentView(R.layout.activity_copa);
 
         RecyclerView recyclerView = findViewById(R.id.lista);
 
@@ -58,7 +58,9 @@ public class BuscaAgenda extends AppCompatActivity {
         private class ListaValoresViewHolder extends RecyclerView.ViewHolder{
             public ListaValoresViewHolder(@NonNull View itemView) {super(itemView);}
             public void bind(Registro dado) {
-                ((TextView) itemView).setText("Nome: " + dado.nome);
+                ((TextView) itemView).setText("Campeao: " + dado.campeao);
+                ((TextView) itemView).setText("Campeao: " + dado.segundo);
+                ((TextView) itemView).setText("Campeao: " + dado.terceiro);
 
             }
         }

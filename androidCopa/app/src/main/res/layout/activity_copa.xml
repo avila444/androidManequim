@@ -66,12 +66,12 @@
                     />
 
                 <EditText
+                    android:id="@+id/edit_campeao"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:hint="@string/hint_champion"
                     android:textAlignment="center"
-                    android:textColor="@color/golden"
-                    />
+                    android:textColor="@color/golden" />
 
             </LinearLayout><!--Position #01-->
 
@@ -103,12 +103,12 @@
                     />
 
                 <EditText
+                    android:id="@+id/edit_segundo"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:hint="@string/hint_second"
                     android:textAlignment="center"
-                    android:textColor="@color/silver"
-                    />
+                    android:textColor="@color/silver" />
 
             </LinearLayout><!--Position #02-->
 
@@ -129,6 +129,7 @@
                     />
 
                 <EditText
+                    android:id="@+id/edit_terceiro"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:hint="@string/hint_third"
@@ -148,6 +149,15 @@
             android:gravity="bottom"
             tools:context=".MainActivity"
             >
+
+
+            <Button
+                android:id="@+id/bt_enviar"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/green"
+                android:text="Enviar" />
 
             <LinearLayout
                 android:id="@+id/botaoShowdb"
@@ -173,7 +183,6 @@
                     app:srcCompat="@drawable/arrow" />
 
             </LinearLayout>
-
 
 
         </LinearLayout><!--Button view database-->

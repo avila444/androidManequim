@@ -24,6 +24,11 @@
     <string name="hint_second">Segundo</string>
     <string name="hint_third">Terceiro</string>
     <string name="view_db">Ver Palpites Salvos</string>
+    <string name="bt_db">Enviar</string>
+
+    <string name="salvar">Salvar</string>
+    <string name="cancelar">Cancelar</string>
+
 
 
 

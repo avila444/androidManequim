@@ -34,7 +34,7 @@ public class sqlHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL(
-                "CREATE TABLE times (id INTEGER primary key, nome TEXT)"
+                "CREATE TABLE palpites (id INTEGER primary key, campeao TEXT, segundo TEXT, terceiro TEXT)"
         );
     }
     @Override
@@ -49,13 +49,15 @@ public class sqlHelper extends SQLiteOpenHelper {
         List<Registro> registros = new ArrayList<>();
         SQLiteDatabase db = getReadableDatabase();
 
-        Cursor cursor = db.rawQuery("Select * from times", null);
+        Cursor cursor = db.rawQuery("Select * from palpites", null);
 
         try{
             if(cursor.moveToFirst()){
                 do{
                     Registro registro = new Registro();
-                    registro.nome = cursor.getString(cursor.getColumnIndex("nome"));
+                    registro.campeao = cursor.getString(cursor.getColumnIndex("campeao"));
+                    registro.segundo = cursor.getString(cursor.getColumnIndex("segundo"));
+                    registro.terceiro = cursor.getString(cursor.getColumnIndex("terceiro"));
 
                     registros.add(registro);
                 } while(cursor.moveToNext());
@@ -70,15 +72,17 @@ public class sqlHelper extends SQLiteOpenHelper {
 
     //----
 //--------
-    long addAgendamento(String valor1){
+    long addAgendamento(String campeao, String segundo, String terceiro){
     SQLiteDatabase sqLiteDatabase = getWritableDatabase();
 
     long id_table = 0;
     try{
         sqLiteDatabase.beginTransaction();
         ContentValues valores = new ContentValues();
-        valores.put("nome", valor1);
-        id_table = sqLiteDatabase.insertOrThrow("times",null, valores);
+        valores.put("campeao", campeao);
+        valores.put("segundo", segundo);
+        valores.put("terceiro", terceiro);
+        id_table = sqLiteDatabase.insertOrThrow("palpites",null, valores);
         sqLiteDatabase.setTransactionSuccessful();
     } catch (Exception e){
         Log.e("sqllite", e.getMessage(),e);
