@@ -3,6 +3,7 @@
     <string name="app_name">Aplicativo Final</string>
     <string name="embranco"> Preencha todos os campos</string>
     <string name="cheio">Todos os campos já foram preenchidos</string>
+    <string name="salvo">Salvo com sucesso</string>
 
     <!--Main Strings-->
     <string name="str_study">Estudos</string>

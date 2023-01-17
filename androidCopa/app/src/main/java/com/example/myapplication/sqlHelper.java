@@ -43,7 +43,7 @@ public class sqlHelper extends SQLiteOpenHelper {
     }
     //------
 
-    @SuppressLint("Range")
+    @SuppressLint({"Range", "SuspiciousIndentation"})
     List<Registro> getRegistro(String valor){
 
         List<Registro> registros = new ArrayList<>();
@@ -72,7 +72,7 @@ public class sqlHelper extends SQLiteOpenHelper {
 
     //----
 //--------
-    long addAgendamento(String campeao, String segundo, String terceiro){
+    long insereBanco(String campeao, String segundo, String terceiro){
     SQLiteDatabase sqLiteDatabase = getWritableDatabase();
 
     long id_table = 0;

@@ -157,7 +157,8 @@
                 android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:backgroundTint="@color/green"
-                android:text="Enviar" />
+                android:text="@string/bt_db"
+                />
 
             <LinearLayout
                 android:id="@+id/botaoShowdb"
@@ -180,13 +181,12 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/arrow" />
+                    app:srcCompat="@drawable/arrow"
+                    />
 
-            </LinearLayout>
+            </LinearLayout><!--Button view database-->
 
-
-        </LinearLayout><!--Button view database-->
-
+        </LinearLayout>
 
     </LinearLayout>
 

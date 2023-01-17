@@ -54,25 +54,38 @@ public class CopaActivity extends AppCompatActivity {
 
                 //Alerta Salvar
                 dialog.setPositiveButton(R.string.salvar, new DialogInterface.OnClickListener() {
-                    @Override
                     public void onClick(DialogInterface dialog, int i) {
-                        long id_table = sqlHelper.getInstance(CopaActivity.this).addAgendamento(campeao, segundo, terceiro);
-                        // imp.hideSoftInputFromWindow(edit_campeao.getWindowToken(), 0);
-                        // imp.hideSoftInputFromWindow(edit_segundo.getWindowToken(), 0);
-                        // imp.hideSoftInputFromWindow(edit_terceiro.getWindowToken(), 0);
+                        long id_table = sqlHelper.getInstance(CopaActivity.this).insereBanco(campeao, segundo, terceiro);
+                        if (id_table>0)
+                            Toast.makeText(CopaActivity.this,R.string.salvo,Toast.LENGTH_LONG).show();
+                        Intent intent = new Intent(CopaActivity.this,ListaActivity.class);
+                        intent.putExtra("valor","teste");
+                        startActivity(intent);
                     }
                 });
 
                 //Alerta Cancelar
                 dialog.setNegativeButton(R.string.cancelar, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int whichButton) {
-                        System.exit(0);
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        InputMethodManager imp = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                        imp.hideSoftInputFromWindow(edit_campeao.getWindowToken(), 0);
+                        imp.hideSoftInputFromWindow(edit_segundo.getWindowToken(), 0);
+                        imp.hideSoftInputFromWindow(edit_terceiro.getWindowToken(), 0);
                     }
                 });
 
                 dialog.create();
                 dialog.show();
 
+            }
+        });
+
+        //Click no botao mostrar banco
+        botaoShowdb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CopaActivity.this, ListaActivity.class);
+                startActivity(intent);
             }
         });
 
