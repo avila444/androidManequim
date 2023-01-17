@@ -21,7 +21,7 @@
         <LinearLayout
             android:id="@+id/botaoEstudo"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="50dp"
             android:background="@color/green"
             android:gravity="center"
             >
@@ -163,14 +163,13 @@
             <LinearLayout
                 android:id="@+id/botaoShowdb"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="50dp"
                 android:background="@color/green"
                 android:gravity="center">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="30dp"
                     android:fontFamily="@font/secular_one"
                     android:text="@string/view_db"
                     android:textColor="@color/white"

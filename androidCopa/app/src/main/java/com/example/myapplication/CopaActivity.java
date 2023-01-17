@@ -55,12 +55,10 @@ public class CopaActivity extends AppCompatActivity {
                 //Alerta Salvar
                 dialog.setPositiveButton(R.string.salvar, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int i) {
-                        long id_table = sqlHelper.getInstance(CopaActivity.this).insereBanco(campeao, segundo, terceiro);
+                        long id_table = sqlHelper.getInstance(CopaActivity.this).addAgendamento(campeao, segundo, terceiro);
                         if (id_table>0)
                             Toast.makeText(CopaActivity.this,R.string.salvo,Toast.LENGTH_LONG).show();
-                        Intent intent = new Intent(CopaActivity.this,ListaActivity.class);
-                        intent.putExtra("valor","teste");
-                        startActivity(intent);
+
                     }
                 });
 
@@ -85,6 +83,7 @@ public class CopaActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(CopaActivity.this, ListaActivity.class);
+                intent.putExtra("valor", "Português");
                 startActivity(intent);
             }
         });

@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -63,9 +62,8 @@ public class ListaActivity extends AppCompatActivity {
             public ListaValoresViewHolder(@NonNull View itemView){
                 super(itemView);
             }
-            @SuppressLint("SetTextI18n")
             public void bind(Registro dado){
-                ((TextView) itemView).setText("Campeao: " + dado.campeao + "\nSegundo: " + dado.segundo + "\nTerceiro: " + dado.terceiro);
+                ((TextView) itemView).setText("Campeao: " + dado.campeao + "\nSegundo: " + dado.segundo + "Terceiro: " + dado.terceiro);
 
             }
         }
